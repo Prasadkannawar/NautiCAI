@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+ultralytics
+opencv-python
+python-multipart
+supabase
+python-dotenv
+numpy
+psycopg2-binary

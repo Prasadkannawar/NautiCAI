@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="NautiCAI – Underwater hull inspection and asset checks made simple. Clear findings for corrosion, marine growth, debris, and damage." />
+  <title>NautiCAI | Underwater Hull Inspection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════ NAVIGATION ═══════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo-link">
+        <div class="logo-wrapper" id="logo-placeholder">
+          <img src="image.png" alt="NautiCAI Logo" class="logo-img-nav" />
+        </div>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#dashboard" class="nav-link">Dashboard</a>
+        <a href="#report" class="nav-link">Reports</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+      </div>
+      <div class="nav-actions">
+        <div class="nav-status">
+          <div class="nav-status-dot"></div>
+          <span>SYSTEM ONLINE</span>
+        </div>
+        <a href="#contact" class="btn-nav-cta">Request Demo</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO SECTION ═══════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-particles" id="particles"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="hero-scanline"></div>
+    </div>
+
+    <div class="hero-content container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Underwater Inspection — Live</span>
+        <span class="badge-code">// NCR-SYS-ONLINE</span>
+      </div>
+      <h1 class="hero-headline">
+        Clear Reports for<br />
+        <span class="gradient-text">Underwater Hull Inspection</span>
+      </h1>
+      <p class="hero-subtext">
+        We help you inspect hulls and underwater structures with easy-to-read results. Find corrosion, marine growth,
+        debris, and damage without the technical hassle.
+      </p>
+      <div class="hero-ctas">
+        <a href="#dashboard" class="btn-primary" id="btn-start-inspection">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          Start Inspection
+        </a>
+        <a href="#about" class="btn-ghost">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3" />
+          </svg>
+          Watch Demo
+        </a>
+      </div>
+      <div class="hero-readout">
+        <div class="readout-cell">
+          <div class="readout-val">83<span>%</span></div>
+          <div class="readout-label">Inspection Confidence</div>
+        </div>
+        <div class="readout-cell">
+          <div class="readout-val">5K<span>+</span></div>
+          <div class="readout-label">Inspections Run</div>
+        </div>
+        <div class="readout-cell">
+          <div class="readout-val">7<span>ms</span></div>
+          <div class="readout-label">Inference Speed</div>
+        </div>
+        <div class="readout-cell">
+          <div class="readout-val">50<span>m+</span></div>
+          <div class="readout-label">Depth Certified</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="rov-container">
+        <div class="scan-ring outer"></div>
+        <div class="scan-ring middle"></div>
+        <div class="scan-ring inner"></div>
+        <div class="rov-body">
+          <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="rov-svg">
+            <rect x="20" y="20" width="80" height="40" rx="8" fill="#112233" stroke="#00b4a0" stroke-width="1.5" />
+            <rect x="30" y="28" width="20" height="14" rx="3" fill="#00b4a0" opacity="0.3" stroke="#00b4a0"
+              stroke-width="1" />
+            <circle cx="70" cy="35" r="10" fill="#0d2030" stroke="#00b4a0" stroke-width="1.5" />
+            <circle cx="70" cy="35" r="6" fill="#00b4a0" opacity="0.5" />
+            <circle cx="70" cy="35" r="3" fill="#00b4a0" />
+            <line x1="10" y1="30" x2="20" y2="30" stroke="#00b4a0" stroke-width="2" stroke-linecap="round" />
+            <line x1="10" y1="50" x2="20" y2="50" stroke="#00b4a0" stroke-width="2" stroke-linecap="round" />
+            <line x1="100" y1="30" x2="110" y2="30" stroke="#00b4a0" stroke-width="2" stroke-linecap="round" />
+            <line x1="100" y1="50" x2="110" y2="50" stroke="#00b4a0" stroke-width="2" stroke-linecap="round" />
+            <rect x="35" y="60" width="12" height="8" rx="2" fill="#00b4a0" opacity="0.6" />
+            <rect x="55" y="60" width="12" height="8" rx="2" fill="#00b4a0" opacity="0.6" />
+            <rect x="75" y="60" width="12" height="8" rx="2" fill="#00b4a0" opacity="0.6" />
+          </svg>
+        </div>
+        <div class="detection-box db-1">
+          <span class="db-label">Corrosion 94%</span>
+        </div>
+        <div class="detection-box db-2">
+          <span class="db-label">Marine Growth 88%</span>
+        </div>
+        <div class="detection-box db-3">
+          <span class="db-label">Healthy 99%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ INDUSTRY APPLICATIONS ══════════════════════ -->
+  <section id="applications" class="section applications-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Where It Helps</span>
+        <h2 class="section-title">Built for <span class="gradient-text">Underwater Assets</span></h2>
+        <p class="section-subtitle">From ship hulls to subsea cables, we provide clear inspection outcomes you can act
+          on.</p>
+      </div>
+      <div class="app-grid">
+        <!-- Ship Hull -->
+        <div class="app-card glass-card" data-aos="fade-up" data-delay="0">
+          <div class="app-icon-wrap">
+            <div class="app-icon-bg"></div>
+            <svg class="app-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 44 C16 36 32 38 56 44" stroke="#00b4a0" stroke-width="2.5" stroke-linecap="round"
+                fill="none" />
+              <path d="M14 44 L10 52 L54 52 L50 44" fill="#0d2030" stroke="#00b4a0" stroke-width="2" />
+              <rect x="24" y="20" width="16" height="24" rx="2" fill="#112233" stroke="#00b4a0" stroke-width="1.5" />
+              <rect x="28" y="14" width="8" height="12" rx="1" fill="#112233" stroke="#00b4a0" stroke-width="1.5" />
+              <line x1="32" y1="8" x2="32" y2="14" stroke="#00b4a0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="48" cy="30" r="5" fill="none" stroke="#00b4a0" stroke-width="1.5" stroke-dasharray="2 2" />
+              <path d="M46 30 L50 30 M48 28 L48 32" stroke="#00b4a0" stroke-width="1.5" />
+            </svg>
+          </div>
+          <h3 class="app-title">Ship Hull Inspection</h3>
+          <p class="app-desc">Clear corrosion and biofouling findings across vessel hulls. Reduce time spent on manual
+            dive checks.</p>
+          <div class="app-tags">
+            <span class="tag">Corrosion Findings</span>
+            <span class="tag">Biofouling</span>
+            <span class="tag">Structural Map</span>
+          </div>
+          <div class="app-metric">
+            <span class="metric-val">85%</span>
+            <span class="metric-label">Cost Reduction vs Manual Dive</span>
+          </div>
+        </div>
+
+        <!-- Subsea Pipelines -->
+        <div class="app-card glass-card" data-aos="fade-up" data-delay="100">
+          <div class="app-icon-wrap">
+            <div class="app-icon-bg"></div>
+            <svg class="app-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 28 Q32 20 56 28" stroke="#00b4a0" stroke-width="3" stroke-linecap="round" fill="none" />
+              <path d="M8 36 Q32 28 56 36" stroke="#00b4a0" stroke-width="3" stroke-linecap="round" fill="none" />
+              <line x1="8" y1="28" x2="8" y2="36" stroke="#00b4a0" stroke-width="3" stroke-linecap="round" />
+              <line x1="56" y1="28" x2="56" y2="36" stroke="#00b4a0" stroke-width="3" stroke-linecap="round" />
+              <rect x="26" y="26" width="12" height="12" rx="2" fill="#ff6b6b" opacity="0.6" stroke="#ff6b6b"
+                stroke-width="1" />
+              <path d="M29 32 L35 32 M32 29 L32 35" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+              <circle cx="46" cy="44" r="6" fill="none" stroke="#00b4a0" stroke-width="1.5" stroke-dasharray="3 2" />
+              <path d="M20 48 L44 48" stroke="#00b4a0" stroke-width="1" stroke-dasharray="2 2" opacity="0.5" />
+            </svg>
+          </div>
+          <h3 class="app-title">Subsea Pipelines</h3>
+          <p class="app-desc">Find cracks, corrosion, and joint issues on subsea pipelines with simple, readable
+            results.</p>
+          <div class="app-tags">
+            <span class="tag">Crack Findings</span>
+            <span class="tag">Joint Analysis</span>
+            <span class="tag">Leak Risk</span>
+          </div>
+          <div class="app-metric">
+            <span class="metric-val">3×</span>
+            <span class="metric-label">Faster Than Traditional ILI</span>
+          </div>
+        </div>
+
+        <!-- Offshore Wind -->
+        <div class="app-card glass-card" data-aos="fade-up" data-delay="200">
+          <div class="app-icon-wrap">
+            <div class="app-icon-bg"></div>
+            <svg class="app-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="32" y1="54" x2="32" y2="14" stroke="#00b4a0" stroke-width="3" stroke-linecap="round" />
+              <path d="M32 18 L18 8" stroke="#00b4a0" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M32 18 L46 8" stroke="#00b4a0" stroke-width="2.5" stroke-linecap="round" />
+              <path d="M32 18 L32 4" stroke="#00b4a0" stroke-width="2.5" stroke-linecap="round" />
+              <rect x="26" y="50" width="12" height="8" rx="2" fill="#112233" stroke="#00b4a0" stroke-width="1.5" />
+              <path d="M14 56 L50 56" stroke="#00b4a0" stroke-width="2" stroke-linecap="round" />
+              <circle cx="32" cy="18" r="3" fill="#00b4a0" />
+              <path d="M10 42 Q20 46 32 40 Q44 34 54 42" stroke="#00b4a0" stroke-width="1.5" stroke-linecap="round"
+                fill="none" opacity="0.5" />
+            </svg>
+          </div>
+          <h3 class="app-title">Offshore Wind Foundations</h3>
+          <p class="app-desc">Monopile and jacket foundation inspection for scour, marine growth, and structural
+            fatigue. Integrates with offshore wind SCADA systems for predictive maintenance.</p>
+          <div class="app-tags">
+            <span class="tag">Scour Monitoring</span>
+            <span class="tag">Fatigue Analysis</span>
+            <span class="tag">SCADA Integration</span>
+          </div>
+          <div class="app-metric">
+            <span class="metric-val">99.1%</span>
+            <span class="metric-label">Uptime on Monitored Assets</span>
+          </div>
+        </div>
+
+        <!-- Port & Harbor -->
+        <div class="app-card glass-card" data-aos="fade-up" data-delay="300">
+          <div class="app-icon-wrap">
+            <div class="app-icon-bg"></div>
+            <svg class="app-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="36" width="48" height="6" rx="2" fill="#112233" stroke="#00b4a0" stroke-width="1.5" />
+              <rect x="12" y="20" width="8" height="16" rx="1" fill="#112233" stroke="#00b4a0" stroke-width="1.5" />
+              <rect x="28" y="14" width="8" height="22" rx="1" fill="#112233" stroke="#00b4a0" stroke-width="1.5" />
+              <rect x="44" y="24" width="8" height="12" rx="1" fill="#112233" stroke="#00b4a0" stroke-width="1.5" />
+              <path d="M8 42 L8 56 M56 42 L56 56" stroke="#00b4a0" stroke-width="2" stroke-linecap="round" />
+              <path d="M8 56 L56 56" stroke="#00b4a0" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="44" cy="18" r="6" fill="none" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="2 2" />
+              <path d="M41 18 L47 18 M44 15 L44 21" stroke="#ffd700" stroke-width="1.5" />
+            </svg>
+          </div>
+          <h3 class="app-title">Port & Harbor Structures</h3>
+          <p class="app-desc">Inspect quay walls, jetties, mooring dolphins, and seabed infrastructure with clear,
+            actionable findings.</p>
+          <div class="app-tags">
+            <span class="tag">Quay Wall</span>
+            <span class="tag">Jetty Inspection</span>
+            <span class="tag">Asset Management</span>
+          </div>
+          <div class="app-metric">
+            <span class="metric-val">40+</span>
+            <span class="metric-label">Ports Monitored Globally</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+  <section id="how-it-works" class="section how-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Workflow</span>
+        <h2 class="section-title">How <span class="gradient-text">NautiCAI</span> Works</h2>
+        <p class="section-subtitle">Three simple steps from your footage to a professional report you can share.</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-connector"></div>
+        <div class="step-card glass-card">
+          <div class="step-number">01</div>
+          <div class="step-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+              <path d="M24 8 L24 32 M16 24 L24 32 L32 24" />
+              <rect x="8" y="36" width="32" height="6" rx="3" />
+              <path d="M14 20 L8 20 L8 42" opacity="0.4" />
+              <path d="M34 20 L40 20 L40 42" opacity="0.4" />
+            </svg>
+          </div>
+          <h3 class="step-title">Upload Image or Video</h3>
+          <p class="step-desc">Drag and drop ROV footage, drone videos, or still images. Supports MP4, MOV, JPG, PNG
+            formats. Seamless API integration with ROV control systems.</p>
+        </div>
+        <div class="step-card glass-card">
+          <div class="step-number">02</div>
+          <div class="step-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+              <circle cx="24" cy="24" r="14" />
+              <path d="M24 10 L24 14 M24 34 L24 38 M10 24 L14 24 M34 24 L38 24" />
+              <circle cx="24" cy="24" r="6" fill="#00b4a0" opacity="0.3" />
+              <path d="M20 24 L22 26 L28 20" stroke="#00b4a0" stroke-width="2.5" />
+            </svg>
+          </div>
+          <h3 class="step-title">Inspection Findings</h3>
+          <p class="step-desc">We highlight corrosion, marine growth, debris, and damage with clear labels and
+            confidence scores.</p>
+        </div>
+        <div class="step-card glass-card">
+          <div class="step-number">03</div>
+          <div class="step-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+              <rect x="10" y="6" width="28" height="36" rx="3" />
+              <path d="M16 16 L32 16 M16 22 L32 22 M16 28 L24 28" />
+              <circle cx="34" cy="34" r="8" fill="#0b1e2d" stroke="#00b4a0" stroke-width="2" />
+              <path d="M30 34 L33 37 L38 31" stroke="#00b4a0" stroke-width="2" />
+            </svg>
+          </div>
+          <h3 class="step-title">Download Inspection Report</h3>
+          <p class="step-desc">Generate a professional PDF report with annotated imagery, risk classification, detection
+            summaries, and remediation recommendations. ISO 19901 compliant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ AI DASHBOARD ═══════════════════════ -->
+  <section id="dashboard" class="section dashboard-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Inspection Dashboard</span>
+        <h2 class="section-title">Run an <span class="gradient-text">Underwater Inspection</span></h2>
+        <p class="section-subtitle">Upload footage and get clear inspection results in minutes.</p>
+      </div>
+      <div class="dashboard-layout">
+        <!-- Upload Panel -->
+        <div class="upload-panel glass-card">
+          <h3 class="panel-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="17 8 12 3 7 8" />
+              <line x1="12" y1="3" x2="12" y2="15" />
+            </svg>
+            Upload Media
+          </h3>
+          <div class="upload-zone" id="upload-zone">
+            <div class="upload-zone-inner">
+              <div class="upload-icon-wrap">
+                <svg viewBox="0 0 64 64" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+                  <path d="M32 20 L32 44 M22 30 L32 20 L42 30" />
+                  <path d="M14 50 L50 50" />
+                  <path d="M10 36 Q10 54 32 54 Q54 54 54 36" opacity="0.3" />
+                </svg>
+              </div>
+              <p class="upload-main-text">Drop files here or <span class="upload-link"
+                  id="upload-link-btn">browse</span></p>
+              <p class="upload-sub-text">Supports MP4, MOV, JPG, PNG · Max 500MB · Folder upload supported</p>
+              <div id="batch-badge" style="display:none;margin-top:8px;">
+                <span
+                  style="background:rgba(0,200,176,0.15);color:#00c8b0;padding:4px 12px;border-radius:12px;font-size:11px;font-weight:600;border:1px solid rgba(0,200,176,0.3);"><span
+                    id="batch-count">0</span> files selected</span>
+              </div>
+            </div>
+          </div>
+          <!-- Hidden inputs — triggered via JS .click() only -->
+          <input type="file" id="file-input" accept="image/*" style="display:none;" multiple />
+          <input type="file" id="folder-input" style="display:none;" webkitdirectory directory multiple />
+          <div class="upload-type-toggle">
+            <button class="type-btn active" id="btn-image" onclick="setUploadType('image')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              Image
+            </button>
+            <button class="type-btn" id="btn-video" onclick="setUploadType('video')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="23 7 16 12 23 17 23 7" />
+                <rect x="1" y="5" width="15" height="14" rx="2" />
+              </svg>
+              Video
+            </button>
+            <button class="type-btn" id="btn-folder" onclick="setUploadType('folder')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+              </svg>
+              Folder
+            </button>
+          </div>
+          <div class="preview-window" id="preview-window">
+            <img id="preview-image" src="" alt="Preview" style="display:none;" />
+            <video id="preview-video" src="" style="display:none;" controls muted></video>
+            <div class="preview-placeholder" id="preview-placeholder">
+              <svg viewBox="0 0 48 48" fill="none" stroke="#1a3a50" stroke-width="1.5">
+                <rect x="6" y="12" width="36" height="24" rx="3" />
+                <circle cx="16" cy="22" r="4" />
+                <path d="M42 32 L30 20 L18 32" />
+              </svg>
+              <span>Preview will appear here</span>
+            </div>
+          </div>
+          <button class="btn-primary btn-run" id="btn-run-ai" onclick="runAIDetection()">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            Run Inspection
+          </button>
+        </div>
+
+        <!-- Results Panel -->
+        <div class="results-panel glass-card">
+          <h3 class="panel-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
+            Inspection Results
+          </h3>
+
+          <!-- Loading State -->
+          <div class="loading-state" id="loading-state" style="display:none;">
+            <div class="ai-loader">
+              <div class="loader-ring"></div>
+              <div class="loader-ring r2"></div>
+              <div class="loader-ring r3"></div>
+              <svg viewBox="0 0 48 48" fill="none" class="loader-icon">
+                <circle cx="24" cy="24" r="22" stroke="#00b4a0" stroke-width="1.5" opacity="0.2" />
+                <path d="M24 10 L24 14 M24 34 L24 38 M10 24 L14 24 M34 24 L38 24" stroke="#00b4a0" stroke-width="2"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <p class="loading-text">Processing Inspection<span class="dots"></span></p>
+            <p class="loading-sub">Analyzing footage and preparing results</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p class="loading-sub progress-stage" style="margin-top:6px;font-family:var(--font-mono);font-size:11px;">
+              Initialising model...</p>
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty-state" id="empty-state">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#1a3a50" stroke-width="1.5">
+              <circle cx="32" cy="32" r="24" />
+              <path d="M22 32 Q32 20 42 32" stroke-linecap="round" />
+              <circle cx="24" cy="28" r="3" fill="#1a3a50" />
+              <circle cx="40" cy="28" r="3" fill="#1a3a50" />
+            </svg>
+            <p>Upload a file and run an inspection</p>
+            <p class="empty-sub">Results will appear here</p>
+          </div>
+
+          <!-- Results State -->
+          <div class="results-content" id="results-content" style="display:none;">
+            <div class="annotated-preview">
+              <div class="annotated-label">Annotated Output</div>
+              <div class="annotated-canvas" id="annotated-canvas">
+                <canvas id="result-canvas" width="400" height="280"></canvas>
+                <div class="scan-line"></div>
+              </div>
+              <!-- Batch gallery nav (hidden for single image) -->
+              <div id="gallery-nav" style="display:none;margin-top:10px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                  <button id="gallery-prev" onclick="galleryNav(-1)"
+                    style="padding:6px 14px;background:var(--bg-2);border:1px solid var(--teal-border);color:var(--teal);font-family:var(--font-mono);font-size:11px;cursor:pointer;border-radius:4px;">◀
+                    Prev</button>
+                  <span id="gallery-counter" style="font-family:var(--font-mono);font-size:12px;color:var(--text-2);">1
+                    / 1</span>
+                  <button id="gallery-next" onclick="galleryNav(1)"
+                    style="padding:6px 14px;background:var(--bg-2);border:1px solid var(--teal-border);color:var(--teal);font-family:var(--font-mono);font-size:11px;cursor:pointer;border-radius:4px;">Next
+                    ▶</button>
+                </div>
+                <div id="gallery-filename"
+                  style="text-align:center;margin-top:6px;font-size:11px;color:var(--text-3);font-family:var(--font-mono);">
+                </div>
+              </div>
+            </div>
+            <div class="detections-list" id="detections-list">
+              <!-- Classes injected by JS -->
+            </div>
+            <div class="confidence-section">
+              <div class="conf-label">Average Confidence Score</div>
+              <div class="conf-bar-wrap">
+                <div class="conf-bar" id="conf-bar"></div>
+              </div>
+              <div class="conf-value" id="conf-value">--</div>
+            </div>
+            <!-- Per-object confidence boxes -->
+            <div id="per-detection-boxes" style="width:100%;margin-top:8px;"></div>
+            <button class="btn-primary btn-report" id="btn-generate-report" onclick="generateReport()">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg>
+              Generate PDF Inspection Report
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ REPORT SECTION ═══════════════════════ -->
+  <section id="report" class="section report-section" style="display:none;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Inspection Reports</span>
+        <h2 class="section-title">Professional <span class="gradient-text">Report Output</span></h2>
+        <p class="section-subtitle">ISO-compliant inspection reports generated automatically. Ready for client delivery,
+          regulatory submission, and asset management systems.</p>
+      </div>
+      <div class="report-preview-container">
+        <div class="report-document glass-card" id="report-document" style="display:none;"></div>
+        <div class="report-demo-card glass-card" id="report-demo">
+          <!-- Report Header -->
+          <div class="rpt-header">
+            <div class="rpt-logo-area">
+              <div class="rpt-logo-icon">
+                <img src="image.png" alt="NautiCAI" class="logo-img-small" />
+              </div>
+              <div>
+                <div class="rpt-company">NautiCAI</div>
+                <div class="rpt-tagline-small">Underwater Hull Inspection</div>
+              </div>
+            </div>
+            <div class="rpt-meta">
+              <div class="rpt-meta-row"><span>Report ID:</span><strong id="rpt-inspection-id">—</strong></div>
+              <div class="rpt-meta-row"><span>Date:</span><strong id="rpt-date">—</strong></div>
+              <div class="rpt-meta-row"><span>Operator:</span><strong>Maritime Inspection Team</strong></div>
+            </div>
+          </div>
+
+          <!-- Report Title -->
+          <div class="rpt-title-block">
+            <h3 class="rpt-main-title">Subsea Hull Inspection Report</h3>
+            <p class="rpt-asset">Asset: MV Northern Star — Aft Starboard Section</p>
+          </div>
+
+          <!-- Risk Badge -->
+          <div class="rpt-risk-banner rpt-risk-moderate" id="rpt-risk-banner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+              <line x1="12" y1="9" x2="12" y2="13" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
+            </svg>
+            <div>
+              <strong id="rpt-risk">MODERATE RISK</strong>
+              <span id="rpt-total">Run an inspection to see results</span>
+            </div>
+            <div class="risk-score">Inference: <span id="rpt-inf-time">—</span></div>
+          </div>
+
+          <!-- Detection Summary -->
+          <div class="rpt-summary-grid">
+            <div class="rpt-summary-item">
+              <div class="rsi-val" id="rpt-count-corrosion" style="color:#e74c3c;">4</div>
+              <div class="rsi-label">Corrosion Zones</div>
+            </div>
+            <div class="rpt-summary-item">
+              <div class="rsi-val" id="rpt-count-growth" style="color:#f39c12;">3</div>
+              <div class="rsi-label">Marine Growth</div>
+            </div>
+            <div class="rpt-summary-item">
+              <div class="rsi-val" id="rpt-count-debris" style="color:#e67e22;">2</div>
+              <div class="rsi-label">Debris Detected</div>
+            </div>
+            <div class="rpt-summary-item">
+              <div class="rsi-val" id="rpt-count-healthy" style="color:#00b4a0;">3</div>
+              <div class="rsi-label">Healthy Surfaces</div>
+            </div>
+          </div>
+
+          <!-- Annotated image in report -->
+          <div class="rpt-annotated">
+            <div class="rpt-annotated-label">Annotated Inspection Images</div>
+            <div class="rpt-annotated-canvas" id="rpt-annotated-canvas">
+              <img id="rpt-annotated-img" src="" alt="Annotated result"
+                style="display:none;width:100%;border-radius:2px;" />
+              <div class="rpt-bbox-layer" id="rpt-bbox-layer"></div>
+              <div class="rpt-annotated-empty" id="rpt-annotated-empty">Run an inspection to view annotated output</div>
+              <div class="rpt-image-bg"></div>
+            </div>
+            <!-- Batch report gallery: all images shown as thumbnails -->
+            <div id="rpt-gallery" style="display:none;margin-top:14px;">
+              <div id="rpt-gallery-grid"
+                style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;"></div>
+            </div>
+          </div>
+
+          <!-- Confidence Breakdown (populated by JS with real detections) -->
+          <div class="rpt-confidence" id="rpt-detection-breakdown">
+            <!-- JS will fill this with actual per-class confidence bars -->
+            <div class="rpt-conf-row">
+              <span class="rpt-conf-label">Corrosion Findings</span>
+              <div class="rpt-conf-bar-wrap">
+                <div class="rpt-conf-bar" style="width:0%;background:#e74c3c;"></div>
+              </div>
+              <span class="rpt-conf-pct">—</span>
+            </div>
+          </div>
+
+          <!-- Recommendations -->
+          <div class="rpt-recommendations">
+            <h4 class="rpt-rec-title">Remediation Recommendations</h4>
+            <ul class="rpt-rec-list">
+              <li><span class="rec-priority high">HIGH</span> Apply cathodic protection coating to zones A2, A5 within
+                30 days.</li>
+              <li><span class="rec-priority medium">MEDIUM</span> Schedule biofouling removal for marine growth zones
+                B1–B3.</li>
+              <li><span class="rec-priority low">LOW</span> Continue monitoring healthy surface zones. Re-inspect in 90
+                days.</li>
+            </ul>
+          </div>
+
+          <!-- Footer -->
+          <div class="rpt-footer">
+            <div class="rpt-footer-left">
+              <strong>NautiCAI Pte. Ltd.</strong><br />
+              1 Marina Boulevard, Singapore 018989<br />
+              contact@nauticai.com · nauticai.com
+            </div>
+            <div class="rpt-footer-right">
+              <div class="rpt-footer-cert">ISO 19901 Compliant</div>
+              <div class="rpt-footer-cert">DNV GL Verified</div>
+            </div>
+          </div>
+        </div>
+        <div class="report-actions">
+          <button class="btn-primary" onclick="downloadReport()">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download PDF Report
+          </button>
+          <button class="btn-ghost" style="margin-left:16px;" onclick="window.print()">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect x="6" y="14" width="12" height="8" />
+            </svg>
+            Print Preview
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT SECTION ═══════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-content">
+          <span class="section-tag">About NautiCAI</span>
+          <h2 class="section-title">Making Underwater Inspection<br /><span class="gradient-text">Clear and Simple</span></h2>
+          <p class="about-text">
+            NautiCAI was founded to fix a simple problem: underwater inspection is slow and expensive. Our platform
+            turns raw footage into clear findings in minutes.
+          </p>
+          <p class="about-text">
+            We combine expert knowledge with smart software to deliver consistent, easy-to-read inspection results.
+          </p>
+          <div class="expansion-areas">
+            <h4 class="expansion-title">Expanding Into</h4>
+            <div class="expansion-grid">
+              <div class="expansion-item">
+                <div class="exp-dot"></div>
+                <span>Subsea Pipeline Networks</span>
+              </div>
+              <div class="expansion-item">
+                <div class="exp-dot"></div>
+                <span>Offshore Wind Foundations</span>
+              </div>
+              <div class="expansion-item">
+                <div class="exp-dot"></div>
+                <span>Subsea Fiber Optic Cables</span>
+              </div>
+              <div class="expansion-item">
+                <div class="exp-dot"></div>
+                <span>Critical Port Infrastructure</span>
+              </div>
+              <div class="expansion-item">
+                <div class="exp-dot"></div>
+                <span>FPSO Hull Monitoring</span>
+              </div>
+              <div class="expansion-item">
+                <div class="exp-dot"></div>
+                <span>Naval Vessel Inspection</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card glass-card">
+            <div class="ac-icon-wrap">
+              <svg viewBox="0 0 48 48" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+                <circle cx="24" cy="16" r="8" />
+                <path d="M8 40 C8 30 40 30 40 40" />
+              </svg>
+            </div>
+            <div class="ac-content">
+              <div class="ac-title">Founded by Engineers</div>
+              <div class="ac-desc">Team with 40+ years combined subsea engineering experience</div>
+            </div>
+          </div>
+          <div class="about-card glass-card">
+            <div class="ac-icon-wrap">
+              <svg viewBox="0 0 48 48" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+                <path d="M12 24 L20 32 L36 16" />
+                <circle cx="24" cy="24" r="18" />
+              </svg>
+            </div>
+            <div class="ac-content">
+              <div class="ac-title">Regulatory Compliance</div>
+              <div class="ac-desc">ISO 19901 · DNV GL · BV Marine certified detection framework</div>
+            </div>
+          </div>
+          <div class="about-card glass-card">
+            <div class="ac-icon-wrap">
+              <svg viewBox="0 0 48 48" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+                <path d="M24 6 L28 18 L40 18 L30 26 L34 38 L24 30 L14 38 L18 26 L8 18 L20 18 Z" />
+              </svg>
+            </div>
+            <div class="ac-content">
+              <div class="ac-title">Focused on Results</div>
+              <div class="ac-desc">Clear findings, consistent reports, and fast turnaround</div>
+            </div>
+          </div>
+          <div class="about-card glass-card">
+            <div class="ac-icon-wrap">
+              <svg viewBox="0 0 48 48" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+                <circle cx="24" cy="24" r="18" />
+                <path d="M16 24 C16 18 32 18 32 24" />
+                <path d="M12 24 C12 14 36 14 36 24" />
+                <circle cx="24" cy="24" r="4" fill="#00b4a0" opacity="0.5" />
+              </svg>
+            </div>
+            <div class="ac-content">
+              <div class="ac-title">Global Deployments</div>
+              <div class="ac-desc">Operations across North Sea, Southeast Asia, Middle East, and Gulf of Mexico</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACT SECTION ═══════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Enterprise Contact</span>
+        <h2 class="section-title">Ready to <span class="gradient-text">Inspect Your Hulls</span>?</h2>
+        <p class="section-subtitle">Speak with our enterprise team. We deliver custom integrations for your ROV and
+          inspection workflows.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div>
+              <div class="cd-label">Email</div>
+              <div class="cd-value"><a href="mailto:contact@nauticai.com">contact@nauticai.com</a></div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div>
+              <div class="cd-label">Headquarters</div>
+              <div class="cd-value">1 Marina Boulevard<br />Singapore 018989</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#00b4a0" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <div>
+              <div class="cd-label">Response Time</div>
+              <div class="cd-value">Enterprise inquiries within 4 hours</div>
+            </div>
+          </div>
+          <div class="partner-logos">
+            <div class="partner-label">Trusted By</div>
+            <div class="partner-grid">
+              <div class="partner-tag">DNV GL</div>
+              <div class="partner-tag">Bureau Veritas</div>
+              <div class="partner-tag">Lloyd's Register</div>
+              <div class="partner-tag">TotalEnergies</div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form glass-card" id="contact-form" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-name">First Name</label>
+              <input type="text" id="f-name" class="form-input" placeholder="James" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-last">Last Name</label>
+              <input type="text" id="f-last" class="form-input" placeholder="Morrison" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-email">Work Email</label>
+            <input type="email" id="f-email" class="form-input" placeholder="j.morrison@company.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-company">Company</label>
+            <input type="text" id="f-company" class="form-input" placeholder="TotalEnergies, Petrobras..." required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-use">Use Case</label>
+            <select id="f-use" class="form-input form-select" required>
+              <option value="" disabled selected>Select inspection type</option>
+              <option>Ship Hull Inspection</option>
+              <option>Subsea Pipeline</option>
+              <option>Offshore Wind Foundation</option>
+              <option>Port & Harbor</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-message">Message</label>
+            <textarea id="f-message" class="form-input form-textarea"
+              placeholder="Describe your inspection requirements, fleet size, and expected data volumes..."
+              rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-form-submit" id="btn-form-submit">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+            Send Enterprise Inquiry
+          </button>
+          <div class="form-success" id="form-success" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00b4a0" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            <strong>Inquiry submitted!</strong> Our enterprise team will respond within 4 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="image.png" alt="NautiCAI" class="logo-img-small" />
+          </div>
+          <p class="footer-tagline">Underwater Hull Inspection & Asset Reporting</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="fc-title">Platform</div>
+            <a href="#dashboard" class="fc-link">Inspection Dashboard</a>
+            <a href="#report" class="fc-link">Reports</a>
+            <a href="#how-it-works" class="fc-link">How It Works</a>
+            <a href="#applications" class="fc-link">Applications</a>
+          </div>
+          <div class="footer-col">
+            <div class="fc-title">Company</div>
+            <a href="#about" class="fc-link">About</a>
+            <a href="#contact" class="fc-link">Contact</a>
+            <a href="#" class="fc-link">Careers</a>
+            <a href="#" class="fc-link">Press</a>
+          </div>
+          <div class="footer-col">
+            <div class="fc-title">Compliance</div>
+            <a href="#" class="fc-link">ISO 19901</a>
+            <a href="#" class="fc-link">DNV GL Verified</a>
+            <a href="#" class="fc-link">Privacy Policy</a>
+            <a href="#" class="fc-link">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 NautiCAI Pte. Ltd. All rights reserved. · Singapore · <a href="admin.html"
+            style="color:var(--text-3);text-decoration:none;font-size:11px;opacity:0.5;">Admin</a></p>
+        <div class="footer-badges">
+          <span class="f-badge">SOC 2 Type II</span>
+          <span class="f-badge">ISO 27001</span>
+          <span class="f-badge">GDPR</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/report.js"></script>
+</body>
+
+</html>
